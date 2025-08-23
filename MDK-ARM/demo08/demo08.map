@@ -421,6 +421,7 @@ Section Cross References
     esp8266_driver.o(i.process_esp8266_response) refers to strstr.o(.text) for strstr
     esp8266_driver.o(i.process_esp8266_response) refers to strchr.o(.text) for strchr
     esp8266_driver.o(i.process_esp8266_response) refers to strrchr.o(.text) for strrchr
+    esp8266_driver.o(i.process_esp8266_response) refers to cloud_interface.o(i.parse_json_str_command) for parse_json_str_command
     esp8266_driver.o(i.process_esp8266_response) refers to memseta.o(.text) for __aeabi_memclr
     esp8266_driver.o(i.process_esp8266_response) refers to main.o(.bss) for uart4_wifi_dma_rx_buf
     esp8266_driver.o(i.send_cmd) refers to printfa.o(i.__0printf) for __2printf
@@ -2063,47 +2064,47 @@ Image Symbol Table
     parse_value                              0x080044e9   Thumb Code   226  cjson.o(i.parse_value)
     i.process_command                        0x080045e4   Section        0  usart_driver.o(i.process_command)
     i.process_esp8266_response               0x08004730   Section        0  esp8266_driver.o(i.process_esp8266_response)
-    i.read_current_led_state                 0x08004978   Section        0  led_control.o(i.read_current_led_state)
-    i.realloc                                0x080049ac   Section        0  mallocr.o(i.realloc)
-    i.report_device_status                   0x08004a18   Section        0  cloud_interface.o(i.report_device_status)
-    i.report_single_param                    0x08004ad8   Section        0  cloud_interface.o(i.report_single_param)
-    i.reset_key_state                        0x08004b40   Section        0  key_handler.o(i.reset_key_state)
-    i.send_cmd                               0x08004b4c   Section        0  esp8266_driver.o(i.send_cmd)
-    i.state_handler_blinking                 0x08004b8c   Section        0  key_handler.o(i.state_handler_blinking)
-    state_handler_blinking                   0x08004b8d   Thumb Code    64  key_handler.o(i.state_handler_blinking)
-    i.state_handler_config_mode              0x08004be0   Section        0  key_handler.o(i.state_handler_config_mode)
-    state_handler_config_mode                0x08004be1   Thumb Code   100  key_handler.o(i.state_handler_config_mode)
-    i.state_handler_config_wait              0x08004c50   Section        0  key_handler.o(i.state_handler_config_wait)
-    state_handler_config_wait                0x08004c51   Thumb Code    68  key_handler.o(i.state_handler_config_wait)
-    i.state_handler_double_wait              0x08004cc0   Section        0  key_handler.o(i.state_handler_double_wait)
-    state_handler_double_wait                0x08004cc1   Thumb Code    84  key_handler.o(i.state_handler_double_wait)
-    i.state_handler_key1_add                 0x08004d3c   Section        0  key_handler.o(i.state_handler_key1_add)
-    state_handler_key1_add                   0x08004d3d   Thumb Code    56  key_handler.o(i.state_handler_key1_add)
-    i.state_handler_key2_config              0x08004d94   Section        0  key_handler.o(i.state_handler_key2_config)
-    state_handler_key2_config                0x08004d95   Thumb Code    72  key_handler.o(i.state_handler_key2_config)
-    i.state_handler_key2_minus               0x08004e00   Section        0  key_handler.o(i.state_handler_key2_minus)
-    state_handler_key2_minus                 0x08004e01   Thumb Code    68  key_handler.o(i.state_handler_key2_minus)
-    i.state_handler_long_press               0x08004e64   Section        0  key_handler.o(i.state_handler_long_press)
-    state_handler_long_press                 0x08004e65   Thumb Code    34  key_handler.o(i.state_handler_long_press)
-    i.state_handler_save_config              0x08004e9c   Section        0  key_handler.o(i.state_handler_save_config)
-    state_handler_save_config                0x08004e9d   Thumb Code    36  key_handler.o(i.state_handler_save_config)
-    i.state_handler_short_press              0x08004ee8   Section        0  key_handler.o(i.state_handler_short_press)
-    state_handler_short_press                0x08004ee9   Thumb Code   134  key_handler.o(i.state_handler_short_press)
-    i.state_handler_wait                     0x08004fac   Section        0  key_handler.o(i.state_handler_wait)
-    state_handler_wait                       0x08004fad   Thumb Code    64  key_handler.o(i.state_handler_wait)
-    i.strtod                                 0x08005000   Section        0  strtod.o(i.strtod)
-    i.utf16_literal_to_utf8                  0x0800501c   Section        0  cjson.o(i.utf16_literal_to_utf8)
-    utf16_literal_to_utf8                    0x0800501d   Thumb Code   210  cjson.o(i.utf16_literal_to_utf8)
-    .constdata                               0x080050ee   Section       18  stm32f1xx_hal_rcc.o(.constdata)
-    aPredivFactorTable                       0x080050ee   Data           2  stm32f1xx_hal_rcc.o(.constdata)
-    aPLLMULFactorTable                       0x080050f0   Data          16  stm32f1xx_hal_rcc.o(.constdata)
-    .constdata                               0x08005100   Section       16  system_stm32f1xx.o(.constdata)
-    .constdata                               0x08005110   Section        8  system_stm32f1xx.o(.constdata)
-    .constdata                               0x08005118   Section      129  ctype_o.o(.constdata)
-    .constdata                               0x0800519c   Section        4  ctype_o.o(.constdata)
-    table                                    0x0800519c   Data           4  ctype_o.o(.constdata)
-    .conststring                             0x080051a0   Section      442  esp8266_driver.o(.conststring)
-    .conststring                             0x0800535c   Section       99  cloud_interface.o(.conststring)
+    i.read_current_led_state                 0x08004984   Section        0  led_control.o(i.read_current_led_state)
+    i.realloc                                0x080049b8   Section        0  mallocr.o(i.realloc)
+    i.report_device_status                   0x08004a24   Section        0  cloud_interface.o(i.report_device_status)
+    i.report_single_param                    0x08004ae4   Section        0  cloud_interface.o(i.report_single_param)
+    i.reset_key_state                        0x08004b4c   Section        0  key_handler.o(i.reset_key_state)
+    i.send_cmd                               0x08004b58   Section        0  esp8266_driver.o(i.send_cmd)
+    i.state_handler_blinking                 0x08004b98   Section        0  key_handler.o(i.state_handler_blinking)
+    state_handler_blinking                   0x08004b99   Thumb Code    64  key_handler.o(i.state_handler_blinking)
+    i.state_handler_config_mode              0x08004bec   Section        0  key_handler.o(i.state_handler_config_mode)
+    state_handler_config_mode                0x08004bed   Thumb Code   100  key_handler.o(i.state_handler_config_mode)
+    i.state_handler_config_wait              0x08004c5c   Section        0  key_handler.o(i.state_handler_config_wait)
+    state_handler_config_wait                0x08004c5d   Thumb Code    68  key_handler.o(i.state_handler_config_wait)
+    i.state_handler_double_wait              0x08004ccc   Section        0  key_handler.o(i.state_handler_double_wait)
+    state_handler_double_wait                0x08004ccd   Thumb Code    84  key_handler.o(i.state_handler_double_wait)
+    i.state_handler_key1_add                 0x08004d48   Section        0  key_handler.o(i.state_handler_key1_add)
+    state_handler_key1_add                   0x08004d49   Thumb Code    56  key_handler.o(i.state_handler_key1_add)
+    i.state_handler_key2_config              0x08004da0   Section        0  key_handler.o(i.state_handler_key2_config)
+    state_handler_key2_config                0x08004da1   Thumb Code    72  key_handler.o(i.state_handler_key2_config)
+    i.state_handler_key2_minus               0x08004e0c   Section        0  key_handler.o(i.state_handler_key2_minus)
+    state_handler_key2_minus                 0x08004e0d   Thumb Code    68  key_handler.o(i.state_handler_key2_minus)
+    i.state_handler_long_press               0x08004e70   Section        0  key_handler.o(i.state_handler_long_press)
+    state_handler_long_press                 0x08004e71   Thumb Code    34  key_handler.o(i.state_handler_long_press)
+    i.state_handler_save_config              0x08004ea8   Section        0  key_handler.o(i.state_handler_save_config)
+    state_handler_save_config                0x08004ea9   Thumb Code    36  key_handler.o(i.state_handler_save_config)
+    i.state_handler_short_press              0x08004ef4   Section        0  key_handler.o(i.state_handler_short_press)
+    state_handler_short_press                0x08004ef5   Thumb Code   134  key_handler.o(i.state_handler_short_press)
+    i.state_handler_wait                     0x08004fb8   Section        0  key_handler.o(i.state_handler_wait)
+    state_handler_wait                       0x08004fb9   Thumb Code    64  key_handler.o(i.state_handler_wait)
+    i.strtod                                 0x0800500c   Section        0  strtod.o(i.strtod)
+    i.utf16_literal_to_utf8                  0x08005028   Section        0  cjson.o(i.utf16_literal_to_utf8)
+    utf16_literal_to_utf8                    0x08005029   Thumb Code   210  cjson.o(i.utf16_literal_to_utf8)
+    .constdata                               0x080050fa   Section       18  stm32f1xx_hal_rcc.o(.constdata)
+    aPredivFactorTable                       0x080050fa   Data           2  stm32f1xx_hal_rcc.o(.constdata)
+    aPLLMULFactorTable                       0x080050fc   Data          16  stm32f1xx_hal_rcc.o(.constdata)
+    .constdata                               0x0800510c   Section       16  system_stm32f1xx.o(.constdata)
+    .constdata                               0x0800511c   Section        8  system_stm32f1xx.o(.constdata)
+    .constdata                               0x08005124   Section      129  ctype_o.o(.constdata)
+    .constdata                               0x080051a8   Section        4  ctype_o.o(.constdata)
+    table                                    0x080051a8   Data           4  ctype_o.o(.constdata)
+    .conststring                             0x080051ac   Section      442  esp8266_driver.o(.conststring)
+    .conststring                             0x08005368   Section       99  cloud_interface.o(.conststring)
     .data                                    0x20000000   Section        1  main.o(.data)
     .data                                    0x20000004   Section       20  cjson.o(.data)
     global_error                             0x20000004   Data           8  cjson.o(.data)
@@ -2434,19 +2435,19 @@ Image Symbol Table
     main                                     0x08003b3d   Thumb Code   144  main.o(i.main)
     parse_json_str_command                   0x08003cf9   Thumb Code   572  cloud_interface.o(i.parse_json_str_command)
     process_command                          0x080045e5   Thumb Code   186  usart_driver.o(i.process_command)
-    process_esp8266_response                 0x08004731   Thumb Code   224  esp8266_driver.o(i.process_esp8266_response)
-    read_current_led_state                   0x08004979   Thumb Code    48  led_control.o(i.read_current_led_state)
-    realloc                                  0x080049ad   Thumb Code   102  mallocr.o(i.realloc)
-    report_device_status                     0x08004a19   Thumb Code   108  cloud_interface.o(i.report_device_status)
-    report_single_param                      0x08004ad9   Thumb Code    60  cloud_interface.o(i.report_single_param)
-    reset_key_state                          0x08004b41   Thumb Code     8  key_handler.o(i.reset_key_state)
-    send_cmd                                 0x08004b4d   Thumb Code    38  esp8266_driver.o(i.send_cmd)
-    strtod                                   0x08005001   Thumb Code    28  strtod.o(i.strtod)
-    AHBPrescTable                            0x08005100   Data          16  system_stm32f1xx.o(.constdata)
-    APBPrescTable                            0x08005110   Data           8  system_stm32f1xx.o(.constdata)
-    __ctype_table                            0x08005118   Data         129  ctype_o.o(.constdata)
-    Region$$Table$$Base                      0x080053c0   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x080053e0   Number         0  anon$$obj.o(Region$$Table)
+    process_esp8266_response                 0x08004731   Thumb Code   234  esp8266_driver.o(i.process_esp8266_response)
+    read_current_led_state                   0x08004985   Thumb Code    48  led_control.o(i.read_current_led_state)
+    realloc                                  0x080049b9   Thumb Code   102  mallocr.o(i.realloc)
+    report_device_status                     0x08004a25   Thumb Code   108  cloud_interface.o(i.report_device_status)
+    report_single_param                      0x08004ae5   Thumb Code    60  cloud_interface.o(i.report_single_param)
+    reset_key_state                          0x08004b4d   Thumb Code     8  key_handler.o(i.reset_key_state)
+    send_cmd                                 0x08004b59   Thumb Code    38  esp8266_driver.o(i.send_cmd)
+    strtod                                   0x0800500d   Thumb Code    28  strtod.o(i.strtod)
+    AHBPrescTable                            0x0800510c   Data          16  system_stm32f1xx.o(.constdata)
+    APBPrescTable                            0x0800511c   Data           8  system_stm32f1xx.o(.constdata)
+    __ctype_table                            0x08005124   Data         129  ctype_o.o(.constdata)
+    Region$$Table$$Base                      0x080053cc   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x080053ec   Number         0  anon$$obj.o(Region$$Table)
     wifi_rx_state                            0x20000000   Data           1  main.o(.data)
     system_tick                              0x2000006c   Data           4  timer_handler.o(.data)
     last_uart_rx_time                        0x20000074   Data           4  timer_handler.o(.data)
@@ -2479,9 +2480,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000131
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00005478, Max: 0x00040000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00005484, Max: 0x00040000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000053e0, Max: 0x00040000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000053ec, Max: 0x00040000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -2681,57 +2682,57 @@ Memory Map of the image
     0x080043dc   0x080043dc   0x0000010c   Code   RO          565    i.parse_string      cjson.o
     0x080044e8   0x080044e8   0x000000fc   Code   RO          566    i.parse_value       cjson.o
     0x080045e4   0x080045e4   0x0000014c   Code   RO         1353    i.process_command   usart_driver.o
-    0x08004730   0x08004730   0x00000248   Code   RO         1254    i.process_esp8266_response  esp8266_driver.o
-    0x08004978   0x08004978   0x00000034   Code   RO         1106    i.read_current_led_state  led_control.o
-    0x080049ac   0x080049ac   0x0000006c   Code   RO         4112    i.realloc           mc_w.l(mallocr.o)
-    0x08004a18   0x08004a18   0x000000c0   Code   RO         1306    i.report_device_status  cloud_interface.o
-    0x08004ad8   0x08004ad8   0x00000068   Code   RO         1307    i.report_single_param  cloud_interface.o
-    0x08004b40   0x08004b40   0x0000000c   Code   RO         1155    i.reset_key_state   key_handler.o
-    0x08004b4c   0x08004b4c   0x00000040   Code   RO         1255    i.send_cmd          esp8266_driver.o
-    0x08004b8c   0x08004b8c   0x00000054   Code   RO         1156    i.state_handler_blinking  key_handler.o
-    0x08004be0   0x08004be0   0x00000070   Code   RO         1157    i.state_handler_config_mode  key_handler.o
-    0x08004c50   0x08004c50   0x00000070   Code   RO         1158    i.state_handler_config_wait  key_handler.o
-    0x08004cc0   0x08004cc0   0x0000007c   Code   RO         1159    i.state_handler_double_wait  key_handler.o
-    0x08004d3c   0x08004d3c   0x00000058   Code   RO         1160    i.state_handler_key1_add  key_handler.o
-    0x08004d94   0x08004d94   0x0000006c   Code   RO         1161    i.state_handler_key2_config  key_handler.o
-    0x08004e00   0x08004e00   0x00000064   Code   RO         1162    i.state_handler_key2_minus  key_handler.o
-    0x08004e64   0x08004e64   0x00000038   Code   RO         1163    i.state_handler_long_press  key_handler.o
-    0x08004e9c   0x08004e9c   0x0000004c   Code   RO         1164    i.state_handler_save_config  key_handler.o
-    0x08004ee8   0x08004ee8   0x000000c4   Code   RO         1165    i.state_handler_short_press  key_handler.o
-    0x08004fac   0x08004fac   0x00000054   Code   RO         1166    i.state_handler_wait  key_handler.o
-    0x08005000   0x08005000   0x0000001c   Code   RO         3814    i.strtod            m_ws.l(strtod.o)
-    0x0800501c   0x0800501c   0x000000d2   Code   RO          575    i.utf16_literal_to_utf8  cjson.o
-    0x080050ee   0x080050ee   0x00000012   Data   RO         2626    .constdata          stm32f1xx_hal_rcc.o
-    0x08005100   0x08005100   0x00000010   Data   RO         3780    .constdata          system_stm32f1xx.o
-    0x08005110   0x08005110   0x00000008   Data   RO         3781    .constdata          system_stm32f1xx.o
-    0x08005118   0x08005118   0x00000081   Data   RO         4215    .constdata          mc_w.l(ctype_o.o)
-    0x08005199   0x08005199   0x00000003   PAD
-    0x0800519c   0x0800519c   0x00000004   Data   RO         4216    .constdata          mc_w.l(ctype_o.o)
-    0x080051a0   0x080051a0   0x000001ba   Data   RO         1257    .conststring        esp8266_driver.o
-    0x0800535a   0x0800535a   0x00000002   PAD
-    0x0800535c   0x0800535c   0x00000063   Data   RO         1309    .conststring        cloud_interface.o
-    0x080053bf   0x080053bf   0x00000001   PAD
-    0x080053c0   0x080053c0   0x00000020   Data   RO         4253    Region$$Table       anon$$obj.o
+    0x08004730   0x08004730   0x00000254   Code   RO         1254    i.process_esp8266_response  esp8266_driver.o
+    0x08004984   0x08004984   0x00000034   Code   RO         1106    i.read_current_led_state  led_control.o
+    0x080049b8   0x080049b8   0x0000006c   Code   RO         4112    i.realloc           mc_w.l(mallocr.o)
+    0x08004a24   0x08004a24   0x000000c0   Code   RO         1306    i.report_device_status  cloud_interface.o
+    0x08004ae4   0x08004ae4   0x00000068   Code   RO         1307    i.report_single_param  cloud_interface.o
+    0x08004b4c   0x08004b4c   0x0000000c   Code   RO         1155    i.reset_key_state   key_handler.o
+    0x08004b58   0x08004b58   0x00000040   Code   RO         1255    i.send_cmd          esp8266_driver.o
+    0x08004b98   0x08004b98   0x00000054   Code   RO         1156    i.state_handler_blinking  key_handler.o
+    0x08004bec   0x08004bec   0x00000070   Code   RO         1157    i.state_handler_config_mode  key_handler.o
+    0x08004c5c   0x08004c5c   0x00000070   Code   RO         1158    i.state_handler_config_wait  key_handler.o
+    0x08004ccc   0x08004ccc   0x0000007c   Code   RO         1159    i.state_handler_double_wait  key_handler.o
+    0x08004d48   0x08004d48   0x00000058   Code   RO         1160    i.state_handler_key1_add  key_handler.o
+    0x08004da0   0x08004da0   0x0000006c   Code   RO         1161    i.state_handler_key2_config  key_handler.o
+    0x08004e0c   0x08004e0c   0x00000064   Code   RO         1162    i.state_handler_key2_minus  key_handler.o
+    0x08004e70   0x08004e70   0x00000038   Code   RO         1163    i.state_handler_long_press  key_handler.o
+    0x08004ea8   0x08004ea8   0x0000004c   Code   RO         1164    i.state_handler_save_config  key_handler.o
+    0x08004ef4   0x08004ef4   0x000000c4   Code   RO         1165    i.state_handler_short_press  key_handler.o
+    0x08004fb8   0x08004fb8   0x00000054   Code   RO         1166    i.state_handler_wait  key_handler.o
+    0x0800500c   0x0800500c   0x0000001c   Code   RO         3814    i.strtod            m_ws.l(strtod.o)
+    0x08005028   0x08005028   0x000000d2   Code   RO          575    i.utf16_literal_to_utf8  cjson.o
+    0x080050fa   0x080050fa   0x00000012   Data   RO         2626    .constdata          stm32f1xx_hal_rcc.o
+    0x0800510c   0x0800510c   0x00000010   Data   RO         3780    .constdata          system_stm32f1xx.o
+    0x0800511c   0x0800511c   0x00000008   Data   RO         3781    .constdata          system_stm32f1xx.o
+    0x08005124   0x08005124   0x00000081   Data   RO         4215    .constdata          mc_w.l(ctype_o.o)
+    0x080051a5   0x080051a5   0x00000003   PAD
+    0x080051a8   0x080051a8   0x00000004   Data   RO         4216    .constdata          mc_w.l(ctype_o.o)
+    0x080051ac   0x080051ac   0x000001ba   Data   RO         1257    .conststring        esp8266_driver.o
+    0x08005366   0x08005366   0x00000002   PAD
+    0x08005368   0x08005368   0x00000063   Data   RO         1309    .conststring        cloud_interface.o
+    0x080053cb   0x080053cb   0x00000001   PAD
+    0x080053cc   0x080053cc   0x00000020   Data   RO         4253    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x080053e0, Size: 0x00001980, Max: 0x0000c000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x080053ec, Size: 0x00001980, Max: 0x0000c000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x080053e0   0x00000001   Data   RW           18    .data               main.o
-    0x20000001   0x080053e1   0x00000003   PAD
-    0x20000004   0x080053e4   0x00000014   Data   RW          577    .data               cjson.o
-    0x20000018   0x080053f8   0x00000004   Data   RW         1107    .data               led_control.o
-    0x2000001c   0x080053fc   0x0000004c   Data   RW         1167    .data               key_handler.o
-    0x20000068   0x08005448   0x00000004   Data   RW         1310    .data               cloud_interface.o
-    0x2000006c   0x0800544c   0x00000008   Data   RW         1394    .data               timer_handler.o
-    0x20000074   0x08005454   0x00000004   Data   RW         1395    .data               timer_handler.o
-    0x20000078   0x08005458   0x0000000c   Data   RW         2463    .data               stm32f1xx_hal.o
-    0x20000084   0x08005464   0x00000004   Data   RW         3782    .data               system_stm32f1xx.o
-    0x20000088   0x08005468   0x00000004   Data   RW         4171    .data               mc_w.l(stdout.o)
-    0x2000008c   0x0800546c   0x00000004   Data   RW         4180    .data               mc_w.l(mvars.o)
-    0x20000090   0x08005470   0x00000004   Data   RW         4181    .data               mc_w.l(mvars.o)
-    0x20000094   0x08005474   0x00000004   Data   RW         4185    .data               mc_w.l(errno.o)
+    0x20000000   0x080053ec   0x00000001   Data   RW           18    .data               main.o
+    0x20000001   0x080053ed   0x00000003   PAD
+    0x20000004   0x080053f0   0x00000014   Data   RW          577    .data               cjson.o
+    0x20000018   0x08005404   0x00000004   Data   RW         1107    .data               led_control.o
+    0x2000001c   0x08005408   0x0000004c   Data   RW         1167    .data               key_handler.o
+    0x20000068   0x08005454   0x00000004   Data   RW         1310    .data               cloud_interface.o
+    0x2000006c   0x08005458   0x00000008   Data   RW         1394    .data               timer_handler.o
+    0x20000074   0x08005460   0x00000004   Data   RW         1395    .data               timer_handler.o
+    0x20000078   0x08005464   0x0000000c   Data   RW         2463    .data               stm32f1xx_hal.o
+    0x20000084   0x08005470   0x00000004   Data   RW         3782    .data               system_stm32f1xx.o
+    0x20000088   0x08005474   0x00000004   Data   RW         4171    .data               mc_w.l(stdout.o)
+    0x2000008c   0x08005478   0x00000004   Data   RW         4180    .data               mc_w.l(mvars.o)
+    0x20000090   0x0800547c   0x00000004   Data   RW         4181    .data               mc_w.l(mvars.o)
+    0x20000094   0x08005480   0x00000004   Data   RW         4185    .data               mc_w.l(errno.o)
     0x20000098        -       0x00000200   Zero   RW           16    .bss                main.o
     0x20000298        -       0x00000100   Zero   RW           17    .bss                main.o
     0x20000398        -       0x00000048   Zero   RW          245    .bss                tim.o
@@ -2750,7 +2751,7 @@ Image component sizes
       2166         68          0         20          0      19428   cjson.o
       1488        748         99          4          0       3555   cloud_interface.o
        108          4          0          0          0        770   dma.o
-       980        520        442          0          0       2972   esp8266_driver.o
+       992        522        442          0          0       2968   esp8266_driver.o
        132         14          0          0          0        867   gpio.o
       1188        374          0         76          0       7500   key_handler.o
        198         28          0          4          0       2709   led_control.o
@@ -2773,7 +2774,7 @@ Image component sizes
        444        172          0          0          0       1823   usart_driver.o
 
     ----------------------------------------------------------------------
-     14320       2412        922        136       6376     622299   Object Totals
+     14332       2414        922        136       6376     622295   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         24          0          3          3          0          0   (incl. Padding)
 
@@ -2855,15 +2856,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     20414       2586       1058        152       6376     617355   Grand Totals
-     20414       2586       1058        152       6376     617355   ELF Image Totals
-     20414       2586       1058        152          0          0   ROM Totals
+     20426       2588       1058        152       6376     617351   Grand Totals
+     20426       2588       1058        152       6376     617351   ELF Image Totals
+     20426       2588       1058        152          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                21472 (  20.97kB)
+    Total RO  Size (Code + RO Data)                21484 (  20.98kB)
     Total RW  Size (RW Data + ZI Data)              6528 (   6.38kB)
-    Total ROM Size (Code + RO Data + RW Data)      21624 (  21.12kB)
+    Total ROM Size (Code + RO Data + RW Data)      21636 (  21.13kB)
 
 ==============================================================================
 
